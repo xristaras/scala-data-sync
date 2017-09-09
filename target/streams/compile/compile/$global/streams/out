@@ -1,0 +1,4 @@
+[0m[[0m[31merror[0m] [0m[0m/home/xristaras/scala_dev/data-sync/src/main/scala/Main.scala:31:56: not found: value curtime[0m
+[0m[[0m[31merror[0m] [0m[0m        val response: HttpResponse[String] = Http(link+curtime).auth("test_BG9skg5agNzWsgJ5oZILGH62phAx5uo6", "").asString[0m
+[0m[[0m[31merror[0m] [0m[0m                                                       ^[0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m
