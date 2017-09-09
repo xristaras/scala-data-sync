@@ -88,16 +88,17 @@ class Storage() {
   SessionFactory.concreteFactory = Some(()=> Session.create(java.sql.DriverManager.getConnection("jdbc:postgresql://localhost:5432/chargebee","chargebee", "G765f76687^(*&^%7h"), new PostgreSqlAdapter))
 
   transaction {
-//    ChargebeeDB.drop
-//    ChargebeeDB.create
+    ChargebeeDB.drop
+    ChargebeeDB.create
   }
 
   def identify_and_store (list_json: Seq[JsValue], type_str: String) : Int = {
+    println("will match " + type_str)
     type_str match {
-      case "subscriptions" =>
+      case "subscription_created" | "subscription_updated" =>
         for (s <- list_json(0)\\"subscription") {
-          var sub = new Subscription(s)
-          sub.due_invoices_count = 666
+          val sub = new Subscription(s)
+//          sub.due_invoices_count = 666
           println("Synching subscription " + sub.id + " in database...")
           try{
             transaction {
@@ -112,8 +113,25 @@ class Storage() {
           }
         }
         return 0
-      case "else" =>
-      return 1
+      case "subscription_deleted" =>
+        for (s <- list_json(0)\\"subscription") {
+          val sub = new Subscription(s)
+//          sub.due_invoices_count = 666
+          println("Deleting subscription " + sub.id + " from database...")
+          try{
+            transaction {
+              if(!ChargebeeDB.subscriptions.lookup(sub.id).isEmpty) {
+                 ChargebeeDB.subscriptions.delete(sub.id)
+              }
+            }
+          } catch {
+            case NonFatal(exc) => println("Could not delete subscription " + sub.id + " from db: " + exc)
+          }
+        }
+        return 0
+      case _ =>
+        println("Could not handle event " + type_str)
+        return 1
     }
 
 }

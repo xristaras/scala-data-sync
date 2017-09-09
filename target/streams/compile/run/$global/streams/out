@@ -1,6 +1,5 @@
 [0m[[0m[0minfo[0m] [0m[0mRunning Main [0m
 [0m[[0m[0mdebug[0m] [0m[0mWaiting for threads to exit or System.exit to be called.[0m
-[0m[[0m[0mdebug[0m] [0m[0mWaiting for thread run-main-f to terminate.[0m
 [0m[[0m[0mdebug[0m] [0m[0m  Classpath:[0m
 [0m[[0m[0mdebug[0m] [0m[0m	/home/xristaras/scala_dev/data-sync/target/scala-2.12/classes[0m
 [0m[[0m[0mdebug[0m] [0m[0m	/home/xristaras/scala_dev/data-sync/lib/cglib-nodep-3.2.5.jar[0m
@@ -35,3 +34,4 @@
 [0m[[0m[0mdebug[0m] [0m[0m	/home/xristaras/.ivy2/cache/com.fasterxml.jackson.core/jackson-databind/bundles/jackson-databind-2.8.5.jar[0m
 [0m[[0m[0mdebug[0m] [0m[0m	/home/xristaras/.ivy2/cache/com.fasterxml.jackson.datatype/jackson-datatype-jdk8/bundles/jackson-datatype-jdk8-2.8.5.jar[0m
 [0m[[0m[0mdebug[0m] [0m[0m	/home/xristaras/.ivy2/cache/com.fasterxml.jackson.datatype/jackson-datatype-jsr310/bundles/jackson-datatype-jsr310-2.8.5.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0mWaiting for thread run-main-0 to terminate.[0m
