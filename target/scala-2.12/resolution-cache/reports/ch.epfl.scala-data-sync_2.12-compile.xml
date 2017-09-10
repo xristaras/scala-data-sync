@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="ivy-report.xsl"?>
+<ivy-report version="1.0">
+	<info
+		organisation="ch.epfl.scala"
+		module="data-sync_2.12"
+		revision="1.0"
+		conf="compile"
+		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, pom, scala-tool"
+		date="20170910143541"/>
+	<dependencies>
+		<module organisation="com.typesafe.play" name="play-json_2.12">
+			<revision name="2.6.0-M1" status="release" pubdate="20161206074656" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/playframework/play-json" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="24">
+				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
+				<metadata-artifact status="no" details="" size="4292" time="0" location="/home/xristaras/.ivy2/cache/com.typesafe.play/play-json_2.12/ivy-2.6.0-M1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/play-json_2.12/2.6.0-M1/play-json_2.12-2.6.0-M1.pom"/>
+				<caller organisation="ch.epfl.scala" name="data-sync_2.12" conf="compile" rev="2.6.0-M1" rev-constraint-default="2.6.0-M1" rev-constraint-dynamic="2.6.0-M1" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="play-json_2.12" type="jar" ext="jar" status="no" details="" size="475432" time="0" location="/home/xristaras/.ivy2/cache/com.typesafe.play/play-json_2.12/jars/play-json_2.12-2.6.0-M1.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/play/play-json_2.12/2.6.0-M1/play-json_2.12-2.6.0-M1.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.fasterxml.jackson.datatype" name="jackson-datatype-jsr310">
+			<revision name="2.8.5" status="release" pubdate="20161114194848" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="30">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="20763" time="0" location="/home/xristaras/.ivy2/cache/com.fasterxml.jackson.datatype/jackson-datatype-jsr310/ivy-2.8.5.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.8.5/jackson-datatype-jsr310-2.8.5.pom"/>
+				<caller organisation="com.typesafe.play" name="play-json_2.12" conf="default, compile, runtime, master" rev="2.8.5" rev-constraint-default="2.8.5" rev-constraint-dynamic="2.8.5" callerrev="2.6.0-M1"/>
+				<artifacts>
+					<artifact name="jackson-datatype-jsr310" type="bundle" ext="jar" status="no" details="" size="90059" time="0" location="/home/xristaras/.ivy2/cache/com.fasterxml.jackson.datatype/jackson-datatype-jsr310/bundles/jackson-datatype-jsr310-2.8.5.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.8.5/jackson-datatype-jsr310-2.8.5.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.fasterxml.jackson.datatype" name="jackson-datatype-jdk8">
+			<revision name="2.8.5" status="release" pubdate="20161114194837" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="29">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="20469" time="0" location="/home/xristaras/.ivy2/cache/com.fasterxml.jackson.datatype/jackson-datatype-jdk8/ivy-2.8.5.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.8.5/jackson-datatype-jdk8-2.8.5.pom"/>
+				<caller organisation="com.typesafe.play" name="play-json_2.12" conf="default, compile, runtime, master" rev="2.8.5" rev-constraint-default="2.8.5" rev-constraint-dynamic="2.8.5" callerrev="2.6.0-M1"/>
+				<artifacts>
+					<artifact name="jackson-datatype-jdk8" type="bundle" ext="jar" status="no" details="" size="25860" time="0" location="/home/xristaras/.ivy2/cache/com.fasterxml.jackson.datatype/jackson-datatype-jdk8/bundles/jackson-datatype-jdk8-2.8.5.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.8.5/jackson-datatype-jdk8-2.8.5.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.fasterxml.jackson.core" name="jackson-databind">
+			<revision name="2.8.5" status="release" pubdate="20161114081438" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://github.com/FasterXML/jackson" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="28">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="8156" time="0" location="/home/xristaras/.ivy2/cache/com.fasterxml.jackson.core/jackson-databind/ivy-2.8.5.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.8.5/jackson-databind-2.8.5.pom"/>
+				<caller organisation="com.typesafe.play" name="play-json_2.12" conf="default, compile, runtime, master" rev="2.8.5" rev-constraint-default="2.8.5" rev-constraint-dynamic="2.8.5" callerrev="2.6.0-M1"/>
+				<caller organisation="com.fasterxml.jackson.datatype" name="jackson-datatype-jdk8" conf="compile, runtime" rev="2.8.5" rev-constraint-default="2.8.5" rev-constraint-dynamic="2.8.5" callerrev="2.8.5"/>
+				<caller organisation="com.fasterxml.jackson.datatype" name="jackson-datatype-jsr310" conf="compile, runtime" rev="2.8.5" rev-constraint-default="2.8.5" rev-constraint-dynamic="2.8.5" callerrev="2.8.5"/>
+				<artifacts>
+					<artifact name="jackson-databind" type="bundle" ext="jar" status="no" details="" size="1236315" time="0" location="/home/xristaras/.ivy2/cache/com.fasterxml.jackson.core/jackson-databind/bundles/jackson-databind-2.8.5.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.8.5/jackson-databind-2.8.5.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.fasterxml.jackson.core" name="jackson-annotations">
+			<revision name="2.8.5" status="release" pubdate="20161114080537" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://github.com/FasterXML/jackson" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="27">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="6969" time="0" location="/home/xristaras/.ivy2/cache/com.fasterxml.jackson.core/jackson-annotations/ivy-2.8.5.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.8.5/jackson-annotations-2.8.5.pom"/>
+				<caller organisation="com.fasterxml.jackson.core" name="jackson-databind" conf="compile, runtime" rev="2.8.0" rev-constraint-default="2.8.0" rev-constraint-dynamic="2.8.0" callerrev="2.8.5"/>
+				<caller organisation="com.typesafe.play" name="play-json_2.12" conf="default, compile, runtime, master" rev="2.8.5" rev-constraint-default="2.8.5" rev-constraint-dynamic="2.8.5" callerrev="2.6.0-M1"/>
+				<caller organisation="com.fasterxml.jackson.datatype" name="jackson-datatype-jsr310" conf="compile, runtime" rev="2.8.5" rev-constraint-default="2.8.5" rev-constraint-dynamic="2.8.5" callerrev="2.8.5"/>
+				<artifacts>
+					<artifact name="jackson-annotations" type="bundle" ext="jar" status="no" details="" size="55782" time="0" location="/home/xristaras/.ivy2/cache/com.fasterxml.jackson.core/jackson-annotations/bundles/jackson-annotations-2.8.5.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.8.5/jackson-annotations-2.8.5.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+			<revision name="2.8.0" evicted="latest-revision" evicted-reason="" downloaded="false" searched="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="-1">
+				<evicted-by rev="2.8.5"/>
+				<caller organisation="com.fasterxml.jackson.core" name="jackson-databind" conf="compile, runtime" rev="2.8.0" rev-constraint-default="2.8.0" rev-constraint-dynamic="2.8.0" callerrev="2.8.5"/>
+				<artifacts>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.fasterxml.jackson.core" name="jackson-core">
+			<revision name="2.8.5" status="release" pubdate="20161114080752" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/FasterXML/jackson-core" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="26">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="7423" time="0" location="/home/xristaras/.ivy2/cache/com.fasterxml.jackson.core/jackson-core/ivy-2.8.5.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-core/2.8.5/jackson-core-2.8.5.pom"/>
+				<caller organisation="com.fasterxml.jackson.core" name="jackson-databind" conf="compile, runtime" rev="2.8.5" rev-constraint-default="2.8.5" rev-constraint-dynamic="2.8.5" callerrev="2.8.5"/>
+				<caller organisation="com.typesafe.play" name="play-json_2.12" conf="default, compile, runtime, master" rev="2.8.5" rev-constraint-default="2.8.5" rev-constraint-dynamic="2.8.5" callerrev="2.6.0-M1"/>
+				<caller organisation="com.fasterxml.jackson.datatype" name="jackson-datatype-jdk8" conf="compile, runtime" rev="2.8.5" rev-constraint-default="2.8.5" rev-constraint-dynamic="2.8.5" callerrev="2.8.5"/>
+				<caller organisation="com.fasterxml.jackson.datatype" name="jackson-datatype-jsr310" conf="compile, runtime" rev="2.8.5" rev-constraint-default="2.8.5" rev-constraint-dynamic="2.8.5" callerrev="2.8.5"/>
+				<artifacts>
+					<artifact name="jackson-core" type="bundle" ext="jar" status="no" details="" size="281079" time="0" location="/home/xristaras/.ivy2/cache/com.fasterxml.jackson.core/jackson-core/bundles/jackson-core-2.8.5.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-core/2.8.5/jackson-core-2.8.5.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.typesafe.play" name="play-functional_2.12">
+			<revision name="2.6.0-M1" status="release" pubdate="20161206074651" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/playframework/play-json" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="25">
+				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
+				<metadata-artifact status="no" details="" size="2688" time="0" location="/home/xristaras/.ivy2/cache/com.typesafe.play/play-functional_2.12/ivy-2.6.0-M1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/play-functional_2.12/2.6.0-M1/play-functional_2.12-2.6.0-M1.pom"/>
+				<caller organisation="com.typesafe.play" name="play-json_2.12" conf="default, compile, runtime, master" rev="2.6.0-M1" rev-constraint-default="2.6.0-M1" rev-constraint-dynamic="2.6.0-M1" callerrev="2.6.0-M1"/>
+				<artifacts>
+					<artifact name="play-functional_2.12" type="jar" ext="jar" status="no" details="" size="177953" time="0" location="/home/xristaras/.ivy2/cache/com.typesafe.play/play-functional_2.12/jars/play-functional_2.12-2.6.0-M1.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/play/play-functional_2.12/2.6.0-M1/play-functional_2.12-2.6.0-M1.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="postgresql" name="postgresql">
+			<revision name="8.4-701.jdbc4" status="release" pubdate="20091002022019" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://jdbc.postgresql.org" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="23">
+				<license name="BSD License" url="http://jdbc.postgresql.org/license.html"/>
+				<metadata-artifact status="no" details="" size="2475" time="0" location="/home/xristaras/.ivy2/cache/postgresql/postgresql/ivy-8.4-701.jdbc4.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/postgresql/postgresql/8.4-701.jdbc4/postgresql-8.4-701.jdbc4.pom"/>
+				<caller organisation="ch.epfl.scala" name="data-sync_2.12" conf="compile" rev="8.4-701.jdbc4" rev-constraint-default="8.4-701.jdbc4" rev-constraint-dynamic="8.4-701.jdbc4" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="postgresql" type="jar" ext="jar" status="no" details="" size="510170" time="0" location="/home/xristaras/.ivy2/cache/postgresql/postgresql/jars/postgresql-8.4-701.jdbc4.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/postgresql/postgresql/8.4-701.jdbc4/postgresql-8.4-701.jdbc4.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.squeryl" name="squeryl_2.12">
+			<revision name="0.9.9" status="release" pubdate="20170715153145" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://squeryl.org" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="19">
+				<license name="Apache 2" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="4129" time="0" location="/home/xristaras/.ivy2/cache/org.squeryl/squeryl_2.12/ivy-0.9.9.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/squeryl/squeryl_2.12/0.9.9/squeryl_2.12-0.9.9.pom"/>
+				<caller organisation="ch.epfl.scala" name="data-sync_2.12" conf="compile" rev="0.9.9" rev-constraint-default="0.9.9" rev-constraint-dynamic="0.9.9" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="squeryl_2.12" type="jar" ext="jar" status="no" details="" size="1419666" time="0" location="/home/xristaras/.ivy2/cache/org.squeryl/squeryl_2.12/jars/squeryl_2.12-0.9.9.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/squeryl/squeryl_2.12/0.9.9/squeryl_2.12-0.9.9.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-lang.modules" name="scala-xml_2.12">
+			<revision name="1.0.6" status="release" pubdate="20161101162105" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="22">
+				<license name="BSD 3-clause" url="http://opensource.org/licenses/BSD-3-Clause"/>
+				<metadata-artifact status="no" details="" size="2987" time="0" location="/home/xristaras/.ivy2/cache/org.scala-lang.modules/scala-xml_2.12/ivy-1.0.6.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.12/1.0.6/scala-xml_2.12-1.0.6.pom"/>
+				<caller organisation="org.squeryl" name="squeryl_2.12" conf="default, compile, runtime, master" rev="1.0.6" rev-constraint-default="1.0.6" rev-constraint-dynamic="1.0.6" callerrev="0.9.9"/>
+				<artifacts>
+					<artifact name="scala-xml_2.12" type="bundle" ext="jar" status="no" details="" size="547860" time="0" location="/home/xristaras/.ivy2/cache/org.scala-lang.modules/scala-xml_2.12/bundles/scala-xml_2.12-1.0.6.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.12/1.0.6/scala-xml_2.12-1.0.6.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.json4s" name="json4s-scalap_2.12">
+			<revision name="3.5.2" status="release" pubdate="20170504233451" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/json4s/json4s" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="21">
+				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+				<metadata-artifact status="no" details="" size="2657" time="0" location="/home/xristaras/.ivy2/cache/org.json4s/json4s-scalap_2.12/ivy-3.5.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/json4s/json4s-scalap_2.12/3.5.2/json4s-scalap_2.12-3.5.2.pom"/>
+				<caller organisation="org.squeryl" name="squeryl_2.12" conf="default, compile, runtime, master" rev="3.5.2" rev-constraint-default="3.5.2" rev-constraint-dynamic="3.5.2" callerrev="0.9.9"/>
+				<artifacts>
+					<artifact name="json4s-scalap_2.12" type="jar" ext="jar" status="no" details="" size="346646" time="0" location="/home/xristaras/.ivy2/cache/org.json4s/json4s-scalap_2.12/jars/json4s-scalap_2.12-3.5.2.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/json4s/json4s-scalap_2.12/3.5.2/json4s-scalap_2.12-3.5.2.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="cglib" name="cglib-nodep">
+			<revision name="3.2.5" status="release" pubdate="20170306212723" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="default, compile, runtime(*), master(compile), runtime, default(compile), compile(*), master" position="20">
+				<license name="ASF 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="4385" time="0" location="/home/xristaras/.ivy2/cache/cglib/cglib-nodep/ivy-3.2.5.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/cglib/cglib-nodep/3.2.5/cglib-nodep-3.2.5.pom"/>
+				<caller organisation="ch.epfl.scala" name="data-sync_2.12" conf="compile" rev="3.2.5" rev-constraint-default="3.2.5" rev-constraint-dynamic="3.2.5" callerrev="1.0"/>
+				<caller organisation="org.squeryl" name="squeryl_2.12" conf="default, compile, runtime, master" rev="3.2.5" rev-constraint-default="3.2.5" rev-constraint-dynamic="3.2.5" callerrev="0.9.9"/>
+				<artifacts>
+					<artifact name="cglib-nodep" type="jar" ext="jar" status="no" details="" size="352931" time="0" location="/home/xristaras/.ivy2/cache/cglib/cglib-nodep/jars/cglib-nodep-3.2.5.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/cglib/cglib-nodep/3.2.5/cglib-nodep-3.2.5.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scalaj" name="scalaj-http_2.12">
+			<revision name="2.3.0" status="release" pubdate="20161104154803" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://github.com/scalaj/scalaj-http" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="18">
+				<license name="Apache 2" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+				<metadata-artifact status="no" details="" size="3016" time="0" location="/home/xristaras/.ivy2/cache/org.scalaj/scalaj-http_2.12/ivy-2.3.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scalaj/scalaj-http_2.12/2.3.0/scalaj-http_2.12-2.3.0.pom"/>
+				<caller organisation="ch.epfl.scala" name="data-sync_2.12" conf="compile" rev="2.3.0" rev-constraint-default="2.3.0" rev-constraint-dynamic="2.3.0" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="scalaj-http_2.12" type="jar" ext="jar" status="no" details="" size="108412" time="0" location="/home/xristaras/.ivy2/cache/org.scalaj/scalaj-http_2.12/jars/scalaj-http_2.12-2.3.0.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/scalaj/scalaj-http_2.12/2.3.0/scalaj-http_2.12-2.3.0.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-lang" name="scala-reflect">
+			<revision name="2.12.3" status="release" pubdate="20170725134444" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" extra-info.apiURL="http://www.scala-lang.org/api/2.12.3/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="6">
+				<license name="BSD 3-Clause" url="http://www.scala-lang.org/license.html"/>
+				<metadata-artifact status="no" details="" size="2637" time="0" location="/home/xristaras/.ivy2/cache/org.scala-lang/scala-reflect/ivy-2.12.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.12.3/scala-reflect-2.12.3.pom"/>
+				<caller organisation="org.typelevel" name="machinist_2.12" conf="compile, runtime" rev="2.12.3" rev-constraint-default="2.12.3" rev-constraint-dynamic="2.12.3" callerrev="0.6.1"/>
+				<caller organisation="com.typesafe.play" name="play-json_2.12" conf="default, compile, runtime, master" rev="2.12.3" rev-constraint-default="2.12.3" rev-constraint-dynamic="2.12.3" callerrev="2.6.0-M1"/>
+				<artifacts>
+					<artifact name="scala-reflect" type="jar" ext="jar" status="no" details="" size="3567871" time="0" location="/home/xristaras/.ivy2/cache/org.scala-lang/scala-reflect/jars/scala-reflect-2.12.3.jar">
+						<origin-location is-local="false" location="UNKNOWN"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.typelevel" name="cats_2.12">
+			<revision name="0.9.0" status="release" pubdate="20170116013138" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/typelevel/cats" extra-info.apiURL="http://typelevel.org/cats/api/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="1">
+				<license name="MIT" url="http://opensource.org/licenses/MIT"/>
+				<metadata-artifact status="no" details="" size="4092" time="0" location="/home/xristaras/.ivy2/cache/org.typelevel/cats_2.12/ivy-0.9.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/typelevel/cats_2.12/0.9.0/cats_2.12-0.9.0.pom"/>
+				<caller organisation="ch.epfl.scala" name="data-sync_2.12" conf="compile" rev="0.9.0" rev-constraint-default="0.9.0" rev-constraint-dynamic="0.9.0" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="cats_2.12" type="jar" ext="jar" status="no" details="" size="303" time="0" location="/home/xristaras/.ivy2/cache/org.typelevel/cats_2.12/jars/cats_2.12-0.9.0.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/typelevel/cats_2.12/0.9.0/cats_2.12-0.9.0.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.typelevel" name="cats-jvm_2.12">
+			<revision name="0.9.0" status="release" pubdate="20170116013125" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/typelevel/cats" extra-info.apiURL="http://typelevel.org/cats/api/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="17">
+				<license name="MIT" url="http://opensource.org/licenses/MIT"/>
+				<metadata-artifact status="no" details="" size="3358" time="0" location="/home/xristaras/.ivy2/cache/org.typelevel/cats-jvm_2.12/ivy-0.9.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/typelevel/cats-jvm_2.12/0.9.0/cats-jvm_2.12-0.9.0.pom"/>
+				<caller organisation="org.typelevel" name="cats_2.12" conf="default, compile, runtime, master" rev="0.9.0" rev-constraint-default="0.9.0" rev-constraint-dynamic="0.9.0" callerrev="0.9.0"/>
+				<artifacts>
+					<artifact name="cats-jvm_2.12" type="jar" ext="jar" status="no" details="" size="300" time="0" location="/home/xristaras/.ivy2/cache/org.typelevel/cats-jvm_2.12/jars/cats-jvm_2.12-0.9.0.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/typelevel/cats-jvm_2.12/0.9.0/cats-jvm_2.12-0.9.0.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.typelevel" name="cats-free_2.12">
+			<revision name="0.9.0" status="release" pubdate="20170116013128" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/typelevel/cats" extra-info.apiURL="http://typelevel.org/cats/api/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="16">
+				<license name="MIT" url="http://opensource.org/licenses/MIT"/>
+				<metadata-artifact status="no" details="" size="3366" time="0" location="/home/xristaras/.ivy2/cache/org.typelevel/cats-free_2.12/ivy-0.9.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/typelevel/cats-free_2.12/0.9.0/cats-free_2.12-0.9.0.pom"/>
+				<caller organisation="org.typelevel" name="cats_2.12" conf="default, compile, runtime, master" rev="0.9.0" rev-constraint-default="0.9.0" rev-constraint-dynamic="0.9.0" callerrev="0.9.0"/>
+				<artifacts>
+					<artifact name="cats-free_2.12" type="jar" ext="jar" status="no" details="" size="210802" time="0" location="/home/xristaras/.ivy2/cache/org.typelevel/cats-free_2.12/jars/cats-free_2.12-0.9.0.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/typelevel/cats-free_2.12/0.9.0/cats-free_2.12-0.9.0.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.typelevel" name="cats-laws_2.12">
+			<revision name="0.9.0" status="release" pubdate="20170116013144" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/typelevel/cats" extra-info.apiURL="http://typelevel.org/cats/api/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="15">
+				<license name="MIT" url="http://opensource.org/licenses/MIT"/>
+				<metadata-artifact status="no" details="" size="4371" time="0" location="/home/xristaras/.ivy2/cache/org.typelevel/cats-laws_2.12/ivy-0.9.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/typelevel/cats-laws_2.12/0.9.0/cats-laws_2.12-0.9.0.pom"/>
+				<caller organisation="org.typelevel" name="cats_2.12" conf="default, compile, runtime, master" rev="0.9.0" rev-constraint-default="0.9.0" rev-constraint-dynamic="0.9.0" callerrev="0.9.0"/>
+				<artifacts>
+					<artifact name="cats-laws_2.12" type="jar" ext="jar" status="no" details="" size="568171" time="0" location="/home/xristaras/.ivy2/cache/org.typelevel/cats-laws_2.12/jars/cats-laws_2.12-0.9.0.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/typelevel/cats-laws_2.12/0.9.0/cats-laws_2.12-0.9.0.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.typelevel" name="cats-core_2.12">
+			<revision name="0.9.0" status="release" pubdate="20170116013305" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/typelevel/cats" extra-info.apiURL="http://typelevel.org/cats/api/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="14">
+				<license name="MIT" url="http://opensource.org/licenses/MIT"/>
+				<metadata-artifact status="no" details="" size="3494" time="0" location="/home/xristaras/.ivy2/cache/org.typelevel/cats-core_2.12/ivy-0.9.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/typelevel/cats-core_2.12/0.9.0/cats-core_2.12-0.9.0.pom"/>
+				<caller organisation="org.typelevel" name="cats-free_2.12" conf="compile, runtime" rev="0.9.0" rev-constraint-default="0.9.0" rev-constraint-dynamic="0.9.0" callerrev="0.9.0"/>
+				<caller organisation="org.typelevel" name="cats-jvm_2.12" conf="compile, runtime" rev="0.9.0" rev-constraint-default="0.9.0" rev-constraint-dynamic="0.9.0" callerrev="0.9.0"/>
+				<caller organisation="org.typelevel" name="cats_2.12" conf="default, compile, runtime, master" rev="0.9.0" rev-constraint-default="0.9.0" rev-constraint-dynamic="0.9.0" callerrev="0.9.0"/>
+				<caller organisation="org.typelevel" name="cats-laws_2.12" conf="compile, runtime" rev="0.9.0" rev-constraint-default="0.9.0" rev-constraint-dynamic="0.9.0" callerrev="0.9.0"/>
+				<artifacts>
+					<artifact name="cats-core_2.12" type="jar" ext="jar" status="no" details="" size="2696252" time="0" location="/home/xristaras/.ivy2/cache/org.typelevel/cats-core_2.12/jars/cats-core_2.12-0.9.0.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/typelevel/cats-core_2.12/0.9.0/cats-core_2.12-0.9.0.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.typelevel" name="cats-kernel-laws_2.12">
+			<revision name="0.9.0" status="release" pubdate="20170116013053" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/typelevel/cats" extra-info.apiURL="http://typelevel.org/cats/api/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="8">
+				<license name="MIT" url="http://opensource.org/licenses/MIT"/>
+				<metadata-artifact status="no" details="" size="3644" time="0" location="/home/xristaras/.ivy2/cache/org.typelevel/cats-kernel-laws_2.12/ivy-0.9.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/typelevel/cats-kernel-laws_2.12/0.9.0/cats-kernel-laws_2.12-0.9.0.pom"/>
+				<caller organisation="org.typelevel" name="cats_2.12" conf="default, compile, runtime, master" rev="0.9.0" rev-constraint-default="0.9.0" rev-constraint-dynamic="0.9.0" callerrev="0.9.0"/>
+				<caller organisation="org.typelevel" name="cats-laws_2.12" conf="compile, runtime" rev="0.9.0" rev-constraint-default="0.9.0" rev-constraint-dynamic="0.9.0" callerrev="0.9.0"/>
+				<artifacts>
+					<artifact name="cats-kernel-laws_2.12" type="jar" ext="jar" status="no" details="" size="50571" time="0" location="/home/xristaras/.ivy2/cache/org.typelevel/cats-kernel-laws_2.12/jars/cats-kernel-laws_2.12-0.9.0.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/typelevel/cats-kernel-laws_2.12/0.9.0/cats-kernel-laws_2.12-0.9.0.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.typelevel" name="catalysts-platform_2.12">
+			<revision name="0.0.5" status="release" pubdate="20161107233451" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/typelevel/catalysts" extra-info.apiURL="https://typelevel.github.io/catalysts/api/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="12">
+				<license name="Apache License" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="2993" time="0" location="/home/xristaras/.ivy2/cache/org.typelevel/catalysts-platform_2.12/ivy-0.0.5.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/typelevel/catalysts-platform_2.12/0.0.5/catalysts-platform_2.12-0.0.5.pom"/>
+				<caller organisation="org.typelevel" name="cats-kernel-laws_2.12" conf="compile, runtime" rev="0.0.5" rev-constraint-default="0.0.5" rev-constraint-dynamic="0.0.5" callerrev="0.9.0"/>
+				<caller organisation="org.typelevel" name="cats-laws_2.12" conf="compile, runtime" rev="0.0.5" rev-constraint-default="0.0.5" rev-constraint-dynamic="0.0.5" callerrev="0.9.0"/>
+				<artifacts>
+					<artifact name="catalysts-platform_2.12" type="jar" ext="jar" status="no" details="" size="1511" time="0" location="/home/xristaras/.ivy2/cache/org.typelevel/catalysts-platform_2.12/jars/catalysts-platform_2.12-0.0.5.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/typelevel/catalysts-platform_2.12/0.0.5/catalysts-platform_2.12-0.0.5.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.typelevel" name="catalysts-macros_2.12">
+			<revision name="0.0.5" status="release" pubdate="20161107233435" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/typelevel/catalysts" extra-info.apiURL="https://typelevel.github.io/catalysts/api/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="13">
+				<license name="Apache License" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="3286" time="0" location="/home/xristaras/.ivy2/cache/org.typelevel/catalysts-macros_2.12/ivy-0.0.5.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/typelevel/catalysts-macros_2.12/0.0.5/catalysts-macros_2.12-0.0.5.pom"/>
+				<caller organisation="org.typelevel" name="catalysts-platform_2.12" conf="compile, runtime" rev="0.0.5" rev-constraint-default="0.0.5" rev-constraint-dynamic="0.0.5" callerrev="0.0.5"/>
+				<artifacts>
+					<artifact name="catalysts-macros_2.12" type="jar" ext="jar" status="no" details="" size="11679" time="0" location="/home/xristaras/.ivy2/cache/org.typelevel/catalysts-macros_2.12/jars/catalysts-macros_2.12-0.0.5.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/typelevel/catalysts-macros_2.12/0.0.5/catalysts-macros_2.12-0.0.5.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.typelevel" name="discipline_2.12">
+			<revision name="0.7.2" status="release" pubdate="20161102200648" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/typelevel/discipline" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="11">
+				<license name="MIT" url="http://www.opensource.org/licenses/mit-license.php"/>
+				<metadata-artifact status="no" details="" size="3193" time="0" location="/home/xristaras/.ivy2/cache/org.typelevel/discipline_2.12/ivy-0.7.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/typelevel/discipline_2.12/0.7.2/discipline_2.12-0.7.2.pom"/>
+				<caller organisation="org.typelevel" name="cats-kernel-laws_2.12" conf="compile, runtime" rev="0.7.2" rev-constraint-default="0.7.2" rev-constraint-dynamic="0.7.2" callerrev="0.9.0"/>
+				<caller organisation="org.typelevel" name="cats-laws_2.12" conf="compile, runtime" rev="0.7.2" rev-constraint-default="0.7.2" rev-constraint-dynamic="0.7.2" callerrev="0.9.0"/>
+				<artifacts>
+					<artifact name="discipline_2.12" type="jar" ext="jar" status="no" details="" size="25701" time="0" location="/home/xristaras/.ivy2/cache/org.typelevel/discipline_2.12/jars/discipline_2.12-0.7.2.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/typelevel/discipline_2.12/0.7.2/discipline_2.12-0.7.2.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scalacheck" name="scalacheck_2.12">
+			<revision name="1.13.4" status="release" pubdate="20161101161622" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scalacheck.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="9">
+				<license name="BSD-style" url="http://www.opensource.org/licenses/bsd-license.php"/>
+				<metadata-artifact status="no" details="" size="2797" time="0" location="/home/xristaras/.ivy2/cache/org.scalacheck/scalacheck_2.12/ivy-1.13.4.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scalacheck/scalacheck_2.12/1.13.4/scalacheck_2.12-1.13.4.pom"/>
+				<caller organisation="org.typelevel" name="discipline_2.12" conf="compile, runtime" rev="1.13.4" rev-constraint-default="1.13.4" rev-constraint-dynamic="1.13.4" callerrev="0.7.2"/>
+				<caller organisation="org.typelevel" name="cats-kernel-laws_2.12" conf="compile, runtime" rev="1.13.4" rev-constraint-default="1.13.4" rev-constraint-dynamic="1.13.4" callerrev="0.9.0"/>
+				<caller organisation="org.typelevel" name="cats-laws_2.12" conf="compile, runtime" rev="1.13.4" rev-constraint-default="1.13.4" rev-constraint-dynamic="1.13.4" callerrev="0.9.0"/>
+				<artifacts>
+					<artifact name="scalacheck_2.12" type="jar" ext="jar" status="no" details="" size="705250" time="0" location="/home/xristaras/.ivy2/cache/org.scalacheck/scalacheck_2.12/jars/scalacheck_2.12-1.13.4.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/scalacheck/scalacheck_2.12/1.13.4/scalacheck_2.12-1.13.4.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-sbt" name="test-interface">
+			<revision name="1.0" status="release" pubdate="20130629014435" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-sbt.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="10">
+				<license name="BSD" url="https://github.com/sbt/test-interface/blob/master/LICENSE"/>
+				<metadata-artifact status="no" details="" size="2589" time="0" location="/home/xristaras/.ivy2/cache/org.scala-sbt/test-interface/ivy-1.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scala-sbt/test-interface/1.0/test-interface-1.0.pom"/>
+				<caller organisation="org.scalacheck" name="scalacheck_2.12" conf="compile, runtime" rev="1.0" rev-constraint-default="1.0" rev-constraint-dynamic="1.0" callerrev="1.13.4"/>
+				<artifacts>
+					<artifact name="test-interface" type="jar" ext="jar" status="no" details="" size="14755" time="0" location="/home/xristaras/.ivy2/cache/org.scala-sbt/test-interface/jars/test-interface-1.0.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/scala-sbt/test-interface/1.0/test-interface-1.0.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.typelevel" name="cats-kernel_2.12">
+			<revision name="0.9.0" status="release" pubdate="20170116013107" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/typelevel/cats" extra-info.apiURL="http://typelevel.org/cats/api/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="7">
+				<license name="MIT" url="http://opensource.org/licenses/MIT"/>
+				<metadata-artifact status="no" details="" size="2777" time="0" location="/home/xristaras/.ivy2/cache/org.typelevel/cats-kernel_2.12/ivy-0.9.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/typelevel/cats-kernel_2.12/0.9.0/cats-kernel_2.12-0.9.0.pom"/>
+				<caller organisation="org.typelevel" name="cats_2.12" conf="default, compile, runtime, master" rev="0.9.0" rev-constraint-default="0.9.0" rev-constraint-dynamic="0.9.0" callerrev="0.9.0"/>
+				<caller organisation="org.typelevel" name="cats-core_2.12" conf="compile, runtime" rev="0.9.0" rev-constraint-default="0.9.0" rev-constraint-dynamic="0.9.0" callerrev="0.9.0"/>
+				<caller organisation="org.typelevel" name="cats-kernel-laws_2.12" conf="compile, runtime" rev="0.9.0" rev-constraint-default="0.9.0" rev-constraint-dynamic="0.9.0" callerrev="0.9.0"/>
+				<caller organisation="org.typelevel" name="cats-laws_2.12" conf="compile, runtime" rev="0.9.0" rev-constraint-default="0.9.0" rev-constraint-dynamic="0.9.0" callerrev="0.9.0"/>
+				<artifacts>
+					<artifact name="cats-kernel_2.12" type="jar" ext="jar" status="no" details="" size="4241540" time="0" location="/home/xristaras/.ivy2/cache/org.typelevel/cats-kernel_2.12/jars/cats-kernel_2.12-0.9.0.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/typelevel/cats-kernel_2.12/0.9.0/cats-kernel_2.12-0.9.0.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.typelevel" name="cats-macros_2.12">
+			<revision name="0.9.0" status="release" pubdate="20170116013024" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/typelevel/cats" extra-info.apiURL="http://typelevel.org/cats/api/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="2">
+				<license name="MIT" url="http://opensource.org/licenses/MIT"/>
+				<metadata-artifact status="no" details="" size="3078" time="0" location="/home/xristaras/.ivy2/cache/org.typelevel/cats-macros_2.12/ivy-0.9.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/typelevel/cats-macros_2.12/0.9.0/cats-macros_2.12-0.9.0.pom"/>
+				<caller organisation="org.typelevel" name="cats-free_2.12" conf="compile, runtime" rev="0.9.0" rev-constraint-default="0.9.0" rev-constraint-dynamic="0.9.0" callerrev="0.9.0"/>
+				<caller organisation="org.typelevel" name="cats-jvm_2.12" conf="compile, runtime" rev="0.9.0" rev-constraint-default="0.9.0" rev-constraint-dynamic="0.9.0" callerrev="0.9.0"/>
+				<caller organisation="org.typelevel" name="cats_2.12" conf="default, compile, runtime, master" rev="0.9.0" rev-constraint-default="0.9.0" rev-constraint-dynamic="0.9.0" callerrev="0.9.0"/>
+				<caller organisation="org.typelevel" name="cats-core_2.12" conf="compile, runtime" rev="0.9.0" rev-constraint-default="0.9.0" rev-constraint-dynamic="0.9.0" callerrev="0.9.0"/>
+				<caller organisation="org.typelevel" name="cats-laws_2.12" conf="compile, runtime" rev="0.9.0" rev-constraint-default="0.9.0" rev-constraint-dynamic="0.9.0" callerrev="0.9.0"/>
+				<artifacts>
+					<artifact name="cats-macros_2.12" type="jar" ext="jar" status="no" details="" size="6438" time="0" location="/home/xristaras/.ivy2/cache/org.typelevel/cats-macros_2.12/jars/cats-macros_2.12-0.9.0.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/typelevel/cats-macros_2.12/0.9.0/cats-macros_2.12-0.9.0.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.typelevel" name="machinist_2.12">
+			<revision name="0.6.1" status="release" pubdate="20161029181418" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://github.com/typelevel/machinist" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="5">
+				<license name="MIT" url="http://opensource.org/licenses/MIT"/>
+				<metadata-artifact status="no" details="" size="2785" time="0" location="/home/xristaras/.ivy2/cache/org.typelevel/machinist_2.12/ivy-0.6.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/typelevel/machinist_2.12/0.6.1/machinist_2.12-0.6.1.pom"/>
+				<caller organisation="org.typelevel" name="cats-free_2.12" conf="compile, runtime" rev="0.6.1" rev-constraint-default="0.6.1" rev-constraint-dynamic="0.6.1" callerrev="0.9.0"/>
+				<caller organisation="org.typelevel" name="cats-jvm_2.12" conf="compile, runtime" rev="0.6.1" rev-constraint-default="0.6.1" rev-constraint-dynamic="0.6.1" callerrev="0.9.0"/>
+				<caller organisation="org.typelevel" name="cats_2.12" conf="default, compile, runtime, master" rev="0.6.1" rev-constraint-default="0.6.1" rev-constraint-dynamic="0.6.1" callerrev="0.9.0"/>
+				<caller organisation="org.typelevel" name="cats-core_2.12" conf="compile, runtime" rev="0.6.1" rev-constraint-default="0.6.1" rev-constraint-dynamic="0.6.1" callerrev="0.9.0"/>
+				<caller organisation="org.typelevel" name="cats-macros_2.12" conf="compile, runtime" rev="0.6.1" rev-constraint-default="0.6.1" rev-constraint-dynamic="0.6.1" callerrev="0.9.0"/>
+				<caller organisation="org.typelevel" name="cats-laws_2.12" conf="compile, runtime" rev="0.6.1" rev-constraint-default="0.6.1" rev-constraint-dynamic="0.6.1" callerrev="0.9.0"/>
+				<artifacts>
+					<artifact name="machinist_2.12" type="jar" ext="jar" status="no" details="" size="33650" time="0" location="/home/xristaras/.ivy2/cache/org.typelevel/machinist_2.12/jars/machinist_2.12-0.6.1.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/typelevel/machinist_2.12/0.6.1/machinist_2.12-0.6.1.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.github.mpilquist" name="simulacrum_2.12">
+			<revision name="0.10.0" status="release" pubdate="20161103161330" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://github.com/mpilquist/simulacrum" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="3">
+				<license name="Three-clause BSD-style" url="https://github.com/mpilquist/simulacrum/blob/master/LICENSE"/>
+				<metadata-artifact status="no" details="" size="3140" time="0" location="/home/xristaras/.ivy2/cache/com.github.mpilquist/simulacrum_2.12/ivy-0.10.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/github/mpilquist/simulacrum_2.12/0.10.0/simulacrum_2.12-0.10.0.pom"/>
+				<caller organisation="org.typelevel" name="cats-free_2.12" conf="compile, runtime" rev="0.10.0" rev-constraint-default="0.10.0" rev-constraint-dynamic="0.10.0" callerrev="0.9.0"/>
+				<caller organisation="org.typelevel" name="cats-jvm_2.12" conf="compile, runtime" rev="0.10.0" rev-constraint-default="0.10.0" rev-constraint-dynamic="0.10.0" callerrev="0.9.0"/>
+				<caller organisation="org.typelevel" name="cats_2.12" conf="default, compile, runtime, master" rev="0.10.0" rev-constraint-default="0.10.0" rev-constraint-dynamic="0.10.0" callerrev="0.9.0"/>
+				<caller organisation="org.typelevel" name="cats-core_2.12" conf="compile, runtime" rev="0.10.0" rev-constraint-default="0.10.0" rev-constraint-dynamic="0.10.0" callerrev="0.9.0"/>
+				<caller organisation="org.typelevel" name="cats-macros_2.12" conf="compile, runtime" rev="0.10.0" rev-constraint-default="0.10.0" rev-constraint-dynamic="0.10.0" callerrev="0.9.0"/>
+				<caller organisation="org.typelevel" name="cats-laws_2.12" conf="compile, runtime" rev="0.10.0" rev-constraint-default="0.10.0" rev-constraint-dynamic="0.10.0" callerrev="0.9.0"/>
+				<artifacts>
+					<artifact name="simulacrum_2.12" type="jar" ext="jar" status="no" details="" size="81815" time="0" location="/home/xristaras/.ivy2/cache/com.github.mpilquist/simulacrum_2.12/jars/simulacrum_2.12-0.10.0.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/github/mpilquist/simulacrum_2.12/0.10.0/simulacrum_2.12-0.10.0.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.typelevel" name="macro-compat_2.12">
+			<revision name="1.1.1" status="release" pubdate="20161102104258" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/milessabin/macro-compat" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="4">
+				<license name="Apache 2" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="2964" time="0" location="/home/xristaras/.ivy2/cache/org.typelevel/macro-compat_2.12/ivy-1.1.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/typelevel/macro-compat_2.12/1.1.1/macro-compat_2.12-1.1.1.pom"/>
+				<caller organisation="com.github.mpilquist" name="simulacrum_2.12" conf="compile, runtime" rev="1.1.1" rev-constraint-default="1.1.1" rev-constraint-dynamic="1.1.1" callerrev="0.10.0"/>
+				<caller organisation="org.typelevel" name="catalysts-macros_2.12" conf="compile, runtime" rev="1.1.1" rev-constraint-default="1.1.1" rev-constraint-dynamic="1.1.1" callerrev="0.0.5"/>
+				<artifacts>
+					<artifact name="macro-compat_2.12" type="jar" ext="jar" status="no" details="" size="3180" time="0" location="/home/xristaras/.ivy2/cache/org.typelevel/macro-compat_2.12/jars/macro-compat_2.12-1.1.1.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/typelevel/macro-compat_2.12/1.1.1/macro-compat_2.12-1.1.1.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-lang" name="scala-library">
+			<revision name="2.12.3" status="release" pubdate="20170725134730" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" extra-info.apiURL="http://www.scala-lang.org/api/2.12.3/" downloaded="false" searched="false" default="false" conf="default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master" position="0">
+				<license name="BSD 3-Clause" url="http://www.scala-lang.org/license.html"/>
+				<metadata-artifact status="no" details="" size="2471" time="0" location="/home/xristaras/.ivy2/cache/org.scala-lang/scala-library/ivy-2.12.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.12.3/scala-library-2.12.3.pom"/>
+				<caller organisation="com.github.mpilquist" name="simulacrum_2.12" conf="compile, runtime" rev="2.12.3" rev-constraint-default="2.12.3" rev-constraint-dynamic="2.12.3" callerrev="0.10.0"/>
+				<caller organisation="org.typelevel" name="machinist_2.12" conf="compile, runtime" rev="2.12.3" rev-constraint-default="2.12.3" rev-constraint-dynamic="2.12.3" callerrev="0.6.1"/>
+				<caller organisation="org.typelevel" name="catalysts-platform_2.12" conf="compile, runtime" rev="2.12.3" rev-constraint-default="2.12.3" rev-constraint-dynamic="2.12.3" callerrev="0.0.5"/>
+				<caller organisation="org.typelevel" name="discipline_2.12" conf="compile, runtime" rev="2.12.3" rev-constraint-default="2.12.3" rev-constraint-dynamic="2.12.3" callerrev="0.7.2"/>
+				<caller organisation="org.typelevel" name="catalysts-macros_2.12" conf="compile, runtime" rev="2.12.3" rev-constraint-default="2.12.3" rev-constraint-dynamic="2.12.3" callerrev="0.0.5"/>
+				<caller organisation="org.json4s" name="json4s-scalap_2.12" conf="compile, runtime" rev="2.12.3" rev-constraint-default="2.12.3" rev-constraint-dynamic="2.12.3" callerrev="3.5.2"/>
+				<caller organisation="com.typesafe.play" name="play-functional_2.12" conf="compile, runtime" rev="2.12.3" rev-constraint-default="2.12.3" rev-constraint-dynamic="2.12.3" callerrev="2.6.0-M1"/>
+				<caller organisation="org.scalaj" name="scalaj-http_2.12" conf="default, compile, runtime, master" rev="2.12.3" rev-constraint-default="2.12.3" rev-constraint-dynamic="2.12.3" callerrev="2.3.0"/>
+				<caller organisation="com.typesafe.play" name="play-json_2.12" conf="default, compile, runtime, master" rev="2.12.3" rev-constraint-default="2.12.3" rev-constraint-dynamic="2.12.3" callerrev="2.6.0-M1"/>
+				<caller organisation="org.typelevel" name="cats_2.12" conf="default, compile, runtime, master" rev="2.12.3" rev-constraint-default="2.12.3" rev-constraint-dynamic="2.12.3" callerrev="0.9.0"/>
+				<caller organisation="org.typelevel" name="cats-kernel-laws_2.12" conf="compile, runtime" rev="2.12.3" rev-constraint-default="2.12.3" rev-constraint-dynamic="2.12.3" callerrev="0.9.0"/>
+				<caller organisation="org.scalacheck" name="scalacheck_2.12" conf="compile, runtime" rev="2.12.3" rev-constraint-default="2.12.3" rev-constraint-dynamic="2.12.3" callerrev="1.13.4"/>
+				<caller organisation="org.typelevel" name="cats-laws_2.12" conf="compile, runtime" rev="2.12.3" rev-constraint-default="2.12.3" rev-constraint-dynamic="2.12.3" callerrev="0.9.0"/>
+				<caller organisation="org.scala-lang.modules" name="scala-xml_2.12" conf="compile, runtime" rev="2.12.3" rev-constraint-default="2.12.3" rev-constraint-dynamic="2.12.3" callerrev="1.0.6"/>
+				<caller organisation="org.typelevel" name="cats-kernel_2.12" conf="compile, runtime" rev="2.12.3" rev-constraint-default="2.12.3" rev-constraint-dynamic="2.12.3" callerrev="0.9.0"/>
+				<caller organisation="ch.epfl.scala" name="data-sync_2.12" conf="compile" rev="2.12.3" rev-constraint-default="2.12.3" rev-constraint-dynamic="2.12.3" callerrev="1.0"/>
+				<caller organisation="org.squeryl" name="squeryl_2.12" conf="default, compile, runtime, master" rev="2.12.3" rev-constraint-default="2.12.3" rev-constraint-dynamic="2.12.3" callerrev="0.9.9"/>
+				<caller organisation="org.typelevel" name="cats-free_2.12" conf="compile, runtime" rev="2.12.3" rev-constraint-default="2.12.3" rev-constraint-dynamic="2.12.3" callerrev="0.9.0"/>
+				<caller organisation="org.typelevel" name="cats-jvm_2.12" conf="compile, runtime" rev="2.12.3" rev-constraint-default="2.12.3" rev-constraint-dynamic="2.12.3" callerrev="0.9.0"/>
+				<caller organisation="org.typelevel" name="macro-compat_2.12" conf="compile, runtime" rev="2.12.3" rev-constraint-default="2.12.3" rev-constraint-dynamic="2.12.3" callerrev="1.1.1"/>
+				<caller organisation="org.scala-lang" name="scala-reflect" conf="compile, runtime" rev="2.12.3" rev-constraint-default="2.12.3" rev-constraint-dynamic="2.12.3" callerrev="2.12.3"/>
+				<caller organisation="org.typelevel" name="cats-core_2.12" conf="compile, runtime" rev="2.12.3" rev-constraint-default="2.12.3" rev-constraint-dynamic="2.12.3" callerrev="0.9.0"/>
+				<caller organisation="org.typelevel" name="cats-macros_2.12" conf="compile, runtime" rev="2.12.3" rev-constraint-default="2.12.3" rev-constraint-dynamic="2.12.3" callerrev="0.9.0"/>
+				<artifacts>
+					<artifact name="scala-library" type="jar" ext="jar" status="no" details="" size="5246851" time="0" location="/home/xristaras/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.12.3.jar">
+						<origin-location is-local="false" location="UNKNOWN"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+	</dependencies>
+</ivy-report>

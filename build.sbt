@@ -12,7 +12,7 @@ scalaVersion := "2.12.3"
 
 // It's possible to define many kinds of settings, such as:
 
-name := "hello-world"
+name := "data-sync"
 organization := "ch.epfl.scala"
 version := "1.0"
 
@@ -26,12 +26,8 @@ version := "1.0"
 libraryDependencies += "org.typelevel" %% "cats" % "0.9.0"
 libraryDependencies += "org.scalaj" %% "scalaj-http" % "2.3.0"
 libraryDependencies += "org.squeryl" % "squeryl_2.12" % "0.9.9"
-//libraryDependencies  ++=  Seq(
-//libraryDependencies += "org.squeryl" %% "squeryl" % "2.11-0.9.9"
 libraryDependencies += "postgresql" % "postgresql" % "8.4-701.jdbc4"
-//libraryDependencies += "org.postgresql" % "postgresql" % "42.1.0"           //"9.1-901-1.jdbc4"
 libraryDependencies += "cglib" % "cglib-nodep" % "3.2.5"
-//libraryDependencies += "io.spray" %%  "spray-json" % "1.3.3"
 libraryDependencies += "com.typesafe.play" %% "play-json" % "2.6.0-M1"
 //)
 //unmanagedJars in Compile += file("libs/chargebee-java-2.3.7.jar")

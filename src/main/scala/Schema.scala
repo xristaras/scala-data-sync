@@ -1,10 +1,9 @@
-package org.chargebee.schema
+package org.chargebee.schema.database
 
 import org.squeryl.PrimitiveTypeMode._
 import scala.collection.mutable.ArrayOps
 import org.squeryl.Session
 import org.squeryl.SessionFactory
-import org.squeryl.PrimitiveTypeMode._
 import org.squeryl.KeyedEntity
 import _root_.org.squeryl.adapters.PostgreSqlAdapter
 import org.squeryl.Schema
@@ -13,72 +12,42 @@ import java.util.Date
 import java.sql.Timestamp
 import scala.util.control.NonFatal
 import play.api.libs.json._
+import org.chargebee.schema.models._
 
-class customer(val id: Integer, 
-              val firstname: String, 
-              val lastname: String,
-              val email: String) {
-def this() = this(0,"","","")		   
-}
- 
-trait Data{}
-
-class Subscription(
-   var id: String = "NA",
-   var customer_id: String = "NA", 
-   var plan_id: String = "NA",
-   var plan_quantity: Int = 0,
-   var plan_unit_price: Int = 0,
-   var billing_period: Int = 0,
-   var billing_period_unit: String = "NA", 
-   var plan_free_quantity: Int = 0,
-   var status: String = "NA",
-   var trial_start: Int = 0,
-   var trial_end: Int = 0,
-   var next_billing_at: Int = 0,
-   var created_at: Int = 0,
-   var started_at: Int = 0,
-   var updated_at: Int = 0,
-   var has_scheduled_changes: Boolean = false,
-   var resource_version: Long = 0,
-   var deleted: Boolean = false,
-   var currency_code: String = "NA", 
-   var addons: String = "NA",
-   var coupons: String = "NA",
-   var due_invoices_count: Int) extends KeyedEntity[String] {
-def this(v: JsValue) = this(
-   id=(v\"id").getOrElse(JsString("UNDEFINED")).as[String],
-   customer_id=(v\"customer_id").getOrElse(JsString("")).as[String],
-   plan_id=(v\"plan_id").getOrElse(JsString("")).as[String],
-   plan_quantity=(v\"plan_quantity").getOrElse(JsNumber(-1)).as[Int],
-   plan_unit_price=(v\"plan_unit_price").getOrElse(JsNumber(-1)).as[Int],
-   billing_period=(v\"billing_period").getOrElse(JsNumber(-1)).as[Int],
-   billing_period_unit=(v\"billing_period_unit").getOrElse(JsString("")).as[String],
-   plan_free_quantity=(v\"plan_free_quantity").getOrElse(JsNumber(-1)).as[Int],
-   status=(v\"status").getOrElse(JsString("")).as[String],
-   trial_start=(v\"trial_start").getOrElse(JsNumber(-1)).as[Int],
-   trial_end=(v\"trial_end").getOrElse(JsNumber(-1)).as[Int],
-   next_billing_at=(v\"next_billing_at").getOrElse(JsNumber(-1)).as[Int],
-   created_at=(v\"created_at").getOrElse(JsNumber(-1)).as[Int],
-   started_at=(v\"started_at").getOrElse(JsNumber(-1)).as[Int],
-   updated_at=(v\"updated_at").getOrElse(JsNumber(-1)).as[Int],
-   has_scheduled_changes=(v\"has_scheduled_changes").getOrElse(JsBoolean(false)).as[Boolean],
-   resource_version=(v\"resource_version").getOrElse(JsNumber(-1L)).as[Long],
-   deleted=(v\"deleted").getOrElse(JsBoolean(false)).as[Boolean],
-   currency_code=(v\"currency_code").getOrElse(JsString("")).as[String],
-   addons=(v\"addons").getOrElse(JsString("")).toString(),    //check flatten
-   coupons=(v\"coupons").getOrElse(JsString("")).toString(),
-   due_invoices_count=(v\"due_invoices_count").getOrElse(JsNumber(-1)).as[Int])
-}
 
 object ChargebeeDB extends Schema {
  
   val subscriptions = table[Subscription]
-
   on(subscriptions)(s => declare(
-    s.id is(indexed),
-    s.due_invoices_count defaultsTo(0)
+    s.id is(indexed)
   ))
+
+  val customers = table[Customer]
+  on(customers)(c => declare(
+    c.id is(indexed)
+  ))
+
+  val payment_sources = table[PaymentSource]
+  on(payment_sources)(pc => declare(
+    pc.id is(indexed),
+    pc.card is(dbType("TEXT")),
+    pc.bank_account is(dbType("TEXT"))
+  ))
+
+  val cards = table[Card]
+  on(cards)(cr => declare(
+    cr.id is(indexed)
+  ))
+
+  val invoices = table[Invoice]
+  on(invoices)(i => declare(
+    i.id is(indexed),
+    i.line_items is(dbType("TEXT")),
+    i.linked_payments is(dbType("TEXT")),
+    i.applied_credits is(dbType("TEXT")),
+    i.adjustment_credit_notes is(dbType("TEXT"))
+  ))
+
 
 }
 
@@ -92,48 +61,61 @@ class Storage() {
     ChargebeeDB.create
   }
 
-  def identify_and_store (list_json: Seq[JsValue], type_str: String) : Int = {
-    println("will match " + type_str)
+  def identify_and_store (list_json: Seq[JsValue], type_str: String) : Unit = {
     type_str match {
       case "subscription_created" | "subscription_updated" =>
         for (s <- list_json(0)\\"subscription") {
           val sub = new Subscription(s)
-//          sub.due_invoices_count = 666
-          println("Synching subscription " + sub.id + " in database...")
-          try{
-            transaction {
-              if(ChargebeeDB.subscriptions.lookup(sub.id).isEmpty) {
-                 ChargebeeDB.subscriptions.insert(sub)
-              } else{
-                 ChargebeeDB.subscriptions.update(sub)
-              }
-            }
-          } catch {
-            case NonFatal(exc) => println("Could not update db for subscription " + sub.id + ": " + exc)
-          }
+          sub.update_in_storage()
         }
-        return 0
       case "subscription_deleted" =>
         for (s <- list_json(0)\\"subscription") {
           val sub = new Subscription(s)
-//          sub.due_invoices_count = 666
-          println("Deleting subscription " + sub.id + " from database...")
-          try{
-            transaction {
-              if(!ChargebeeDB.subscriptions.lookup(sub.id).isEmpty) {
-                 ChargebeeDB.subscriptions.delete(sub.id)
-              }
-            }
-          } catch {
-            case NonFatal(exc) => println("Could not delete subscription " + sub.id + " from db: " + exc)
-          }
+          sub.delete_from_storage()
         }
-        return 0
+      case "customer_created" | "customer_updated" =>
+        for (c <- list_json(0)\\"customer") {
+          val cus = new Customer(c)
+          cus.update_in_storage()
+        }
+      case "customer_deleted" =>
+        for (c <- list_json(0)\\"customer") {
+          val cus = new Customer(c)
+          cus.delete_from_storage()
+        }
+      case "payment_source_added" | "payment_source_updated" =>
+        for (pc <- list_json(0)\\"payment_source") {
+          val payso = new PaymentSource(pc)
+          payso.update_in_storage()
+        }
+      case "payment_source_deleted" =>
+        for (pc <- list_json(0)\\"payment_source") {
+          val payso = new Customer(pc)
+          payso.delete_from_storage()
+        }
+      case "card_added" | "card_updated" =>
+        for (c <- list_json(0)\\"card") {
+          val cr = new Card(c)
+          cr.update_in_storage()
+        }
+      case "card_deleted" =>
+        for (c <- list_json(0)\\"card") {
+          val cr = new Card(c)
+          cr.delete_from_storage()
+        }
+      case "invoice_generated" | "invoice_updated" =>
+        for (i <- list_json(0)\\"invoice") {
+          val inv = new Invoice(i)
+          inv.update_in_storage()
+        }
+      case "invoice_deleted" =>
+        for (i <- list_json(0)\\"invoice") {
+          val inv = new Invoice(i)
+          inv.delete_from_storage()
+        }
       case _ =>
         println("Could not handle event " + type_str)
-        return 1
     }
-
-}
+  }
 }
 
